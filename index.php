@@ -24,16 +24,12 @@ $dots = [0,1,2,3,4,5,6];
   <h1>Julie's Dominoes</h1>
 
   <div id = "dominoes" class="dominoes">
-    <?php for ($i = 0; $i < 100; $i++) : ?>
-      <?php
-      
-     $dot = $dots[rand(0, count(dots) -1)];
-    ?>
 
     <div class="domino">
-      <div class="dots one">
+      <div class="dot <?php echo $dot;?>">
         <div class="dot"></div>
       </div>
+      
       <div class="dots two">
         <div class="dot"></div>
         <div class="dot"></div>
@@ -69,7 +65,12 @@ $dots = [0,1,2,3,4,5,6];
         <div class="dot"></div>
       </div>
     </div>
-    <!-- REMOVE THE DEMO CODE -->
+    
+    <div id = "dominoes" class="dominoes">
+    <?php for ($i = 0; $i < 100; $i++) : ?>
+      <?php
+      $dot = $dots[rand(0, count(dots) -1)];
+?>
   </div>
 </body>
 </html>
