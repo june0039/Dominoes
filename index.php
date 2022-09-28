@@ -1,3 +1,16 @@
+<?php
+/**
+ * Dominoes: Num array created to ulter the number of dots 
+ * on the dominoes
+ */
+
+
+$dots = [0,1,2,3,4,5,6];
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +21,15 @@
   <link rel="stylesheet" href="dominoes.css">
 </head>
 <body>
-  <h1>YOUR NAME's Dominoes</h1>
-  <div class="dominoes">
-    <!-- REMOVE THE DEMO CODE -->
+  <h1>Julie's Dominoes</h1>
+
+  <div id = "dominoes" class="dominoes">
+    <?php for ($i = 0; $i < 100; $i++) : ?>
+      <?php
+      
+     $dot = $dots[rand(0, count(dots) -1)];
+    ?>
+
     <div class="domino">
       <div class="dots one">
         <div class="dot"></div>
@@ -54,3 +73,4 @@
   </div>
 </body>
 </html>
+     
